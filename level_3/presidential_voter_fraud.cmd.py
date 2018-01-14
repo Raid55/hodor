@@ -19,10 +19,9 @@ def main():
     badCaptcha = 0
     page = urllib.request.urlopen(url_page)
     pageSoup = BeautifulSoup(page, 'html.parser')
-    # print(pageSoup)
-
-    # print(find_sesh_id(page))
-    # urllib.request.urlretrieve('http://158.69.76.135' + '/captcha.php', 'captcha.php')
+    
+    if testing: print(pageSoup)
+    if testing: print(find_sesh_id(page))
 
     voteCount = find_id_vt_count(pageSoup, raidsDopeId)
     seshId = find_sesh_id(page)
